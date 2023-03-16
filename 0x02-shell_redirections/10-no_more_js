@@ -1,0 +1,2 @@
+#!/bin/bahs
+find -name "*.js" -type f -delete
