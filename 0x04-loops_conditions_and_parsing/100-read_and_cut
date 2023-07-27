@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
+# displays username, user id and home directory for each line of /etc/passwd.
 
-# Check if the file /etc/passwd exists and
-# Read the content of /etc/passwd line by line
-
-if [ ! -f "/etc/passwd" ];
-then
-	echo "Error: /etc/passwd file not found."
-	exit 1
-fi
-while IFS=: read -r username _ uid _ home _;
+given="/etc/passwd"
+while IFS= read -r line
 do
-	echo "Username: $username"
-	echo "User ID: $uid"
-	echo "Home Directory: $home"
-done < "/etc/passwd"
+	echo "$line" | cut -d':' --fields=1,3,6
+done < "$given"
