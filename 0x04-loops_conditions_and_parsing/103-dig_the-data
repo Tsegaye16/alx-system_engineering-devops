@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Use awk to extract the visitor IP and HTTP status code from apache-access.log.
+# Then use sort and uniq to group and count occurrences of each combination.
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -rn
