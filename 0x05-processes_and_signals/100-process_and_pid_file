@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Save the PID of the current process to the file
+# Trap signals and handle them accordingly
+# Display "To infinity and beyond" indefinitely with a 2-second sleep between iterations
+
+echo "$$" > /var/run/myscript.pid
+trap 'echo "I hate the kill command"' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'rm -f /var/run/myscript.pid; exit 0' SIGQUIT SIGTERM
+
+while true;
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

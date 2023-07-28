@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# killing the previous process.
+
+pkill -f "highlander" --signal SIGKILL

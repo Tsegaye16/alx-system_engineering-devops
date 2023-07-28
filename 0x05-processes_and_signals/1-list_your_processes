@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#displaying all processes and their hierarchy
+ps axuf

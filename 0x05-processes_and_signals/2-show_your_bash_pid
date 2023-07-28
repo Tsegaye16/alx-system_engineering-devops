@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Ignore ShellCheck warning for using ps with grep
+# shellcheck disable=SC2009
+
+# Use ps with grep to filter lines containing the word "bash"
+ps axuf | grep bash
