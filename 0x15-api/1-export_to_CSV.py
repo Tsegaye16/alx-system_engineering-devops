@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python script to export data in the CSV forma.
+''' Python script to export data in the CSV forma.'''
 import csv
 import requests
 import sys
